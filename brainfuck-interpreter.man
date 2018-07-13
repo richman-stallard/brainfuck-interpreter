@@ -1,0 +1,20 @@
+Brainfuck interpreter
+
+USAGE:
+    brainfuck-interpreter.py -h
+    brainfuck-interpreter.py SOURCE INPUT
+    
+ARGS:
+    -h  Prints this help and exits the program.
+    
+SOURCE:
+    This specifies where the program code can be found. If this arg starts with
+    a dash (-) character, the rest of the arg is considered the program code.
+    Otherwise, the arg is interpreted as a file path from which the program code
+    is loaded.
+    
+INPUT:
+    This specifies where the program's input can be found. If this arg starts
+    with a dash (-) character, the rest of the arg is considered the program's
+    standard input. Otherwise, the arg is interpreted as a file path from which
+    the program input is loaded.
