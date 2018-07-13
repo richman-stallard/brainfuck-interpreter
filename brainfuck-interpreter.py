@@ -123,8 +123,6 @@ class TStateMachine:
         self.fMemPtr = 0
         
     # Getters
-    def GetProgram(self):
-        return self.fProgram
     def GetOutputBuffer(self):
         return self.fOutputBuffer
     def GetCurrentMemVal(self):
