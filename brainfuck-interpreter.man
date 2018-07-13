@@ -2,10 +2,12 @@ Brainfuck interpreter
 
 USAGE:
     brainfuck-interpreter.py -h
-    brainfuck-interpreter.py SOURCE INPUT
+    brainfuck-interpreter.py [-v] SOURCE INPUT
     
 ARGS:
     -h  Prints this help and exits the program.
+    -v  Verbose mode. Writes the state machine's memory to stdout after
+        execution.
     
 SOURCE:
     This specifies where the program code can be found. If this arg starts with

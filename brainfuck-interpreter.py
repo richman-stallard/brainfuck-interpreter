@@ -166,9 +166,8 @@ class TStateMachine:
         return 0
         
 def main(argv):
-    C_DEBUG = True
-    
     # Handle CLI args.
+    vDebug = False
     if "-h" in argv[1:]:
         # Load help text file.
         try:
@@ -189,6 +188,9 @@ def main(argv):
         finally:
             return 0
     else:
+        if "-v" in argv[1:]:
+            vDebug = True
+            argv.remove("-v")
         assert len(argv) == 3, "Missing or too many arguments. Use -h for help."
         (vInterpreterPath, vCode, vInput) = argv
     
@@ -230,7 +232,7 @@ def main(argv):
     vProgram.Execute()
     
     # Output to stdout.
-    if C_DEBUG:
+    if vDebug:
         print "Memory after execution:"
         print vStateMachine.fMemory
     print vStateMachine.GetOutputBuffer()
